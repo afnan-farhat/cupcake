@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Reset</title>
+  <link rel="stylesheet" href="../CSS/mainStyle.css">
+</head>
+<body class="resetpass">
+  <div class="container2 ">
+    <div class="emoji1">🔐</div>
+    <h2>Password Reset</h2>
+    <p class = "preset" id="msg">Checking...</p>
+    <a class="btn-home" href="../HTML/login.html">Go to Login</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById('msg').innerText = params.get("msg") || "Something went wrong.";
+  </script>
+</body>
+</html>

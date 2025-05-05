@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Result</title>
+    <link rel="stylesheet" href="../CSS/mainStyle.css">
+</head>
+<body class="clogin">
+
+    <div class="container0">
+        <div class="emoji">💬</div>
+        <h2>Login Status</h2>
+        <p class="clogin0" id="result-msg">Checking your credentials...</p>
+        <a href="index.html" class="btn-home">Back to Login</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const msg = params.get('msg');
+        if (msg) {
+            document.getElementById('result-msg').innerText = msg;
+        }
+    </script>
+
+</body>
+</html>
+

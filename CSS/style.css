@@ -1,0 +1,320 @@
+body {
+
+    font-family: 'Fredoka';
+    font-size: 22px;
+    text-align: center;
+    background-image: url('../images/bg.png');
+    height: 100vh;
+    background-size: auto;
+    background-position: center;
+
+    background-repeat: no-repeat;
+}
+
+.no-background {
+    background-image: url('../images/Footer-background.png');
+
+}
+
+p {
+    font-size: medium;
+}
+
+/* order page */
+.page-name {
+    padding-top: 160px;
+    align-items: center;
+}
+
+.product-box {
+    border: 2px solid transparent;
+    padding: 15px;
+    border-color: pink;
+    display: block;
+}
+
+/* carousel */
+.carousel-container {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.arrow {
+    font-size: 36px;
+    cursor: pointer;
+
+    user-select: none;
+    padding: 0 20px;
+    color: rgb(154, 119, 125);
+}
+
+.product-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+}
+
+.product-row {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.product-box {
+    width: 150px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cupcake-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.hover-cupcake {
+    display: none;
+}
+
+.product-box:hover .default-cupcake {
+    display: none;
+}
+
+.product-box:hover .hover-cupcake {
+    display: inline-block;
+}
+
+.cupcake-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* product page */
+
+/* Button for previous arrow */
+.button-prev {
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prevoious-arrow {
+    font-size: 30px;
+    color: rgb(154, 119, 125);
+    inline-size: 30px;
+
+}
+
+
+
+/* divide it into 2 columns */
+.column {
+    float: left;
+    width: 47%;
+    text-align: left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* 1- product image (first columns) */
+.product-image {
+    padding-top: 220px;
+    padding-left: 60px;
+}
+
+/* 2- product name & description  (second columns)*/
+.description {
+    padding-top: 220px;
+}
+
+/* 3- product price */
+.price {
+    margin-top: 30px;
+    margin-right: 30px;
+    text-align: right;
+    color: palevioletred;
+}
+
+/* 4- Dropdown menu */
+.dropbtn {
+    background-color: transparent;
+    border: 2px solid pink;
+    color: palevioletred;
+    margin-right: 30px;
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    box-shadow: none;
+    outline: none;
+    text-align: left;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 220px;
+    font-size: small;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: rgba(255, 192, 203, 0.352);
+    border-color: pink;
+}
+
+/* 5- buttons: next and cancel */
+.button-next {
+    background-color: rgb(219, 144, 157);
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    border: none;
+    box-shadow: none;
+    color: white;
+    font-weight: bold;
+}
+
+.button-next:hover {
+    background-color: rgb(181, 114, 125);
+
+}
+
+.button-cancel {
+    background-color: #f1f1f1;
+    margin-right: 30px;
+    margin-left: 30px;
+    padding-top: 10px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    border: none;
+    box-shadow: none;
+    color: rgb(93, 89, 89);
+    font-weight: bold;
+}
+
+.button-cancel:hover {
+    background-color: #c5c2c2;
+
+}
+
+/* 6- Footer */
+.footer {
+       background:rgb(250, 238, 240)
+}
+
+.logo-footer{
+    width: 150px;
+    height: 150px;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.column h5 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.column p,
+.column ul {
+    font-size: 14px;
+    color: rgb(199, 135, 156);
+}
+
+.column ul {
+    padding: 0;
+    list-style-type: disc;
+}
+
+.social-icons a {
+    color: rgb(199, 135, 156);
+    font-size: 25px;  
+    margin: 8px 8px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: rgb(146, 58, 88);
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.footer .row:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.footer-line {
+    width: 70%;
+    border: 0;
+    height: 1px;
+    background-color: rgb(199, 135, 156);
+    margin: 10px 0; 
+}
+
+.description-footer {
+    color: rgb(126, 69, 88);
+}

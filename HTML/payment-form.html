@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Cupcake Store</title>
+    <link rel="stylesheet" href="../CSS/mainStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka" rel="stylesheet">
+</head>
+<body class="background">
+
+   <!-- Header and Navbar -->
+   <header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../images/logo.png" alt="the store logo">
+        </div>
+    
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.Html"> Home</a></li>
+                <li><a href="../HTML/about.html"> About us</a></li>
+                <li><a href="../HTML/menu.html"> Menu</a></li>
+                <li><a href="../HTML/contact.html"> Contact</a></li>
+
+            </ul>
+    
+        </div>
+    </nav>
+    
+</header>
+
+    <!-- Payment Form Section -->
+    <div class="payment-container">
+        <div class="payment-form">
+            
+
+            <!-- Payment Details Form -->
+            <form id="payment-form" action="../PHP/storePayment.php" method="POST">
+
+                <h2 class="PaymentHeading">Select Payment Method</h2>
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <input type="radio" id="credit-card" name="payment-method" value="Credit Card" checked>
+                <label for="credit-card">Credit Card</label>
+
+                <input type="radio" id="bank-transfer" name="payment-method" value="Bank Transfer">
+                <label for="bank-transfer">Bank Transfer</label>
+
+                <input type="radio" id="paypal" name="payment-method" value="PayPal">
+                <label for="paypal">PayPal</label>
+            </div>
+
+                <div class="input-group">
+                    <label for="name-on-card">Name on Card</label>
+                    <input type="text" id="name-on-card" name="name-on-card" placeholder="John Doe" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+                </div>
+
+                <div class="payment-details">
+                    <div class="input-group">
+                        <label for="month">Month</label>
+                        <select id="month" name="month" required>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="year">Year</label>
+                        <select id="year" name="year" required>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="***" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="purchase-button" class="btn">Purchase Now</button>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>
+

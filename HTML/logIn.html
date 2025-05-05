@@ -1,0 +1,66 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Cupcake Store</title>
+    <link rel="stylesheet" href="../CSS/mainStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka" rel="stylesheet">
+</head>
+<body class="background">
+
+    <!-- Header and Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="the store logo">
+            </div>
+        
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.Html"> Home</a></li>
+                    <li><a href="../HTML/about.html"> About us</a></li>
+                    <li><a href="../HTML/menu.html"> Menu</a></li>
+                    <li><a href="../HTML/contact.html"> Contact</a></li>
+                    <li><a href="../HTML/logIn.html" class="btn-signup">Log In</a></li>
+    
+                </ul>
+        
+            </div>
+        </nav>
+        
+    </header>
+
+    <!-- Login Form Section -->
+    <div class="signup-container">
+        <h2 class="page-name">Login Account</h2>
+        <p>Log in to continue with your payment and complete your order.</p>
+
+        <!-- Login Form -->
+        <form action="../PHP/login.php" method="POST">
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="username@example.com" required="">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="**********" required="">
+            </div>
+
+            <button type="submit" class="btn">Login</button>
+        </form>
+        
+
+        <!-- Forgot Password Link -->
+        <div class="footer-links">
+            <p><a href="reset-password.html">Forgot Password?</a></p>
+        </div>
+
+        <div class="footer-links">
+            <p>Don't have an account? <a href="signup.html">signup here</a></p>
+        </div>
+
+    
+
+
+
+</body></html>

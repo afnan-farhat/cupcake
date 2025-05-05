@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - Cupcake Store</title>
+    <link rel="stylesheet" href="../CSS/mainStyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka" rel="stylesheet">
+</head>
+<script>
+    function filterProducts() {
+        const query = document.getElementById("searchInput").value.toLowerCase();
+        const products = document.querySelectorAll(".product-box");
+    
+        products.forEach(product => {
+            const name = product.querySelector(".cupcake-name").textContent.toLowerCase();
+            if (name.includes(query)) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
+        });
+    }
+    </script>
+    
+<body class="background">
+
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="the store logo">
+            </div>
+        
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.Html"> Home</a></li>
+                    <li><a href="../HTML/about.html"> About us</a></li>
+                    <li><a href="../HTML/menu.html"> Menu</a></li>
+                    <li><a href="../HTML/contact.html"> Contact</a></li>
+                    <li><a href="../HTML/logIn.html" class="btn-signup">Log In</a></li>
+    
+                </ul>
+        
+            </div>
+        </nav>
+        
+    </header>
+
+    
+        <h2 class="page-name">Menu</h2>
+
+        <form class="search-form" onsubmit="return false;">
+            <input type="text" id="searchInput" placeholder="Search cupcakes..." class="search-input">
+            <button type="button" class="search-button" onclick="filterProducts()">Search</button>
+        </form>
+        
+        
+    
+        <div class="carousel-container">
+            <div class="arrow" onclick="scrollCarousel(-1)">❮</div>
+            <div class="product-wrapper" id="productsRow">
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=0">
+                        <img src="../images/choco blue.png" alt="Blue Cream Chocolate" class="cupcake-image">
+                        <p class="cupcake-name">Blue Cream Chocolate</p>
+                        <p class="cupcake-price">$6.00</p>
+                    </a>
+                </div>
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=1">
+                        <img src="../images/cupcack with cherry.jpg" alt="Cherry with Cream" class="cupcake-image">
+                        <p class="cupcake-name">Cherry with Cream</p>
+                        <p class="cupcake-price">$5.00</p>
+                    </a>
+                </div>
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=2">
+                        <img src="../images/redvilivatCream.jpg" alt="Red Velvet with Cream" class="cupcake-image">
+                        <p class="cupcake-name">Red Velvet with Cream</p>
+                        <p class="cupcake-price">$7.00</p>
+                    </a>
+                </div>
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=3">
+                        <img src="../images/strubarrycream.jpg" alt="Strawberry Cream" class="cupcake-image">
+                        <p class="cupcake-name">Strawberry Cream</p>
+                        <p class="cupcake-price">$8.00</p>
+                    </a>
+                </div>
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=4">
+                        <img src="../images/5.png" alt="Strawberry Pieces" class="cupcake-image">
+                        <p class="cupcake-name">Strawberry Pieces</p>
+                        <p class="cupcake-price">$10.00</p>
+                    </a>
+                </div>
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=5">
+                        <img src="../images/StrawberryCupcake.png" alt="Strawberry Swirl" class="cupcake-image">
+                        <p class="cupcake-name">Strawberry Swirl</p>
+                        <p class="cupcake-price">$7.00</p>
+                    </a>
+                </div>
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=6">
+                        <img src="../images/CaramelCrunchCupcake.png" alt="Caramel Crunch" class="cupcake-image">
+                        <p class="cupcake-name">Caramel Crunch</p>
+                        <p class="cupcake-price">$8.00</p>
+                    </a>
+                </div>
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=7">
+                        <img src="../images/LemonZestCupcak.png" alt="Lemon Zest" class="cupcake-image">
+                        <p class="cupcake-name">Lemon Zest</p>
+                        <p class="cupcake-price">$6.00</p>
+                    </a>
+                </div>
+    
+                <div class="product-box">
+                    <a href="loginMessage.html?index=8">
+                        <img src="../images/RedVelvetCharmCupcake.png" alt="Red Velvet Charm" class="cupcake-image">
+                        <p class="cupcake-name">Red Velvet Charm</p>
+                        <p class="cupcake-price">$9.00</p>
+                    </a>
+                </div>
+    
+            </div>
+            <div class="arrow" onclick="scrollCarousel(1)">❯</div>
+        </div>
+    
+        <script>
+            const productWrapper = document.getElementById('productsRow');
+    
+            function scrollCarousel(direction) {
+                const scrollAmount = 300;
+                productWrapper.scrollBy({
+                    left: direction * scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
+    
+            setInterval(() => {
+                scrollCarousel(1);
+            }, 5000);
+        </script>
+    
+    </body>
+    </html>
+    

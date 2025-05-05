@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Manager</title>
+  <link rel="stylesheet" href="../AdminFiles/sstyle.css">
+</head>
+<body>
+
+  <h1>🧁 Product Manager Panel</h1>
+
+  <!-- Add Product -->
+  <form action="addProduct.php" method="POST">
+    <div class="section-title">Add Product</div>
+    <input type="text" name="name" placeholder="Product Name" required>
+    <input type="text" name="description" placeholder="Description" required>
+    <input type="number" step="0.01" name="price" placeholder="Price" required>
+    <input type="text" name="image" placeholder="Image path (e.g., ../images/cake.jpg)" required>
+    <button type="submit">Add Product</button>
+  </form> <br><br>
+
+  <!-- Update Product -->
+  <form action="updateProduct.php" method="POST">
+    <div class="section-title">Update Product</div>
+    <input type="number" name="id" placeholder="Product ID to Update" required>
+    <input type="text" name="name" placeholder="New Product Name" required>
+    <input type="text" name="description" placeholder="New Description" required>
+    <input type="number" step="0.01" name="price" placeholder="New Price" required>
+    <input type="text" name="image" placeholder="New Image path" required>
+    <button type="submit">Update Product</button>
+  </form><br><br>
+
+  <!-- Delete Product -->
+  <form action="deleteProduct.php" method="POST">
+    <div class="section-title">Delete Product</div>
+    <input type="number" name="id" placeholder="Product ID to Delete" required>
+    <button type="submit">Delete Product</button>
+  </form>
+
+</body>
+</html>
