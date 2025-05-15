@@ -196,7 +196,7 @@ p {
 
 .dropdown:hover .dropbtn {
     background-color: rgba(255, 192, 203, 0.352);
-    border-color: pink;
+    border-color: rgb(205, 255, 192);
 }
 
 /* 5- buttons: next and cancel */

@@ -1,46 +1,75 @@
+/* 
+heading color: rgb(219, 144, 157)
+paragraph color: black
+button color:      background-color: rgb(219, 144, 157); color: white;
+button color hover:  background-color: #f5c6d3; color: rgb(219, 144, 157);
+*/
+* {
+  font-family: 'Fredoka';
+}
+
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #fff0f5;
-    padding: 20px;
-    color: #333;
-  }
+  font-family: 'Fredoka';
+  font-size: 22px;
+  background-color: #f7e8ec;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Fills entire screen */
+  margin-top: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  color: #333;
+}
 
-  h1 {
-    color: #d63384;
-    text-align: center;
-  }
+h1 {
+    color: rgb(188, 69, 107);
+    letter-spacing: 1px;
+  text-align: center;
+}
 
-  form {
-    background: #fff;
-    border: 2px solid #ffb6c1;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    max-width: 490px;
-    margin: auto;
-  }
+form {
+  background: #fff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 490px;
+  margin: auto;
+}
 
-  input, button {
-    padding: 10px;
-    margin: 5px 0;
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+input{
 
-  button {
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
+  padding: 10px;
+  margin: 5px 0;
+  width: 95%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 
-  button:hover {
-    background-color: #ff1493;
-  }
+}
+button {
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-  .section-title {
-    margin-top: 30px;
-    font-weight: bold;
-    color: #c71585;
-  }
+button {
+    background-color: rgb(219, 144, 157);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f5c6d3;
+  color: rgb(219, 144, 157);
+}
+
+.section-title {
+  margin-top: 30px;
+  font-weight: bold;
+    color: rgb(188, 69, 107);
+}

@@ -117,8 +117,8 @@ $conn->close();
 
         <div class="column">
             <div class="description">
-                <h3><?php echo $product['name']; ?></h3>
-                <p><?php echo $product['description']; ?></p>
+                <h3 class="black"><?php echo $product['name']; ?></h3>
+                <p class="black"><?php echo $product['description']; ?></p>
                 <br>
 
                 <form action="..\HTML\payment-form.html" method="get">

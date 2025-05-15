@@ -18,20 +18,20 @@
             <div class="logo">
                 <img src="../images/logo.png" alt="the store logo">
             </div>
-        
+
             <div class="nav-links">
                 <ul>
-                    <li><a href="index.Html"> Home</a></li>
+                    <li><a href="../index.html"> Home</a></li>
                     <li><a href="../HTML/about.html"> About us</a></li>
                     <li><a href="../HTML/menu.html"> Menu</a></li>
                     <li><a href="../HTML/contact.html"> Contact</a></li>
-                <li><a href="../HTML/logIn.html" class="btn-signup">Log In</a></li>
-    
+                    <li><a href="../HTML/logIn.html" class="btn-signup">Log In</a></li>
+
                 </ul>
-        
+
             </div>
         </nav>
-        
+
     </header>
 
     <!-- About Section -->
@@ -57,19 +57,60 @@
             </ul>
         </section>
 
-        <!-- Customer Testimonials -->
         <section class="testimonials">
             <h2>What Our Customers Say</h2>
-            <div class="testimonial">
-                <p>"Best cupcakes I've ever had! Super fresh and delicious. Will order again!"</p>
-                <h4>- Sarah Johnson</h4>
+            <div class="testimonial-slider" id="testimonialSlider">
+                <div class="testimonial">
+                    <p>"Best cupcakes I've ever had! Super fresh and delicious. Will order again!"</p>
+                    <h4>- Sarah Johnson</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Amazing flavors and beautiful presentation. Perfect for my birthday party!"</p>
+                    <h4>- Emily Brown</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"Delicious treats and fast delivery. Highly recommend to everyone!"</p>
+                    <h4>- Michael Lee</h4>
+                </div>
             </div>
-            <div class="testimonial">
-                <p>"Amazing flavors and beautiful presentation. Perfect for my birthday party!"</p>
-                <h4>- Emily Brown</h4>
-            </div>
+            <div class="dots" id="dotsContainer"></div>
         </section>
+<br>
+<br>
+<br>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const slider = document.getElementById('testimonialSlider');
+        const testimonials = slider.children;
+        const dotsContainer = document.getElementById('dotsContainer');
+        let index = 0;
+
+        // Create dots dynamically
+        for (let i = 0; i < testimonials.length; i++) {
+            const dot = document.createElement('span');
+            if (i === 0) dot.classList.add('active');
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = dotsContainer.children;
+
+        function goToSlide(i) {
+            slider.scrollTo({
+                left: i * slider.offsetWidth,
+                behavior: 'smooth'
+            });
+
+            for (let dot of dots) dot.classList.remove('active');
+            dots[i].classList.add('active');
+        }
+
+        setInterval(() => {
+            index = (index + 1) % testimonials.length;
+            goToSlide(index);
+        }, 2000);
+    </script>
+
 </body>
 
 </html>

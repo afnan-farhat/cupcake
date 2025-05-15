@@ -19,45 +19,51 @@
    <!-- Header and Navbar -->
    <header>
       <nav class="navbar">
-          <div class="logo">
-              <img src="../images/logo.png" alt="the store logo">
-          </div>
-      
-          <div class="nav-links">
-              <ul>
-               <li><a href="index.Html"> Home</a></li>
+         <div class="logo">
+            <img src="../images/logo.png" alt="the store logo">
+         </div>
+
+         <div class="nav-links">
+            <ul>
+               <li><a href="../index.html"> Home</a></li>
                <li><a href="../HTML/about.html"> About us</a></li>
-                  <li><a href="../HTML/menu.html"> Menu</a></li>
-                  <li><a href="../HTML/contact.html"> Contact</a></li>
-                  <li><a href="../HTML/logIn.html" class="btn-signup">Log In</a></li>
-  
-              </ul>
-      
-          </div>
+               <li><a href="../HTML/menu.html"> Menu</a></li>
+               <li><a href="../HTML/contact.html"> Contact</a></li>
+               <li><a href="../HTML/logIn.html" class="btn-signup">Log In</a></li>
+
+            </ul>
+
+         </div>
       </nav>
-      
-  </header>
+
+   </header>
 
    <h2 class="page-name">CONTACT US</h2>
 
    <div class="row">
       <div class="contact-form">
-         <h3 onmouseover="style.color='#f5c6d3'" onmouseout="style.color='black'">SEND YOUR MESSAGE</h3>
+         <br>
+         <br>
+         <h3>SEND YOUR MESSAGE</h3>
          <form id="cform" action="../PHP/storMsgInfo.php" method="POST">
-             
+
             <div class="hint" id="snameHint">Please enter your full name.</div>
-            <input type="text" name="senderName" placeholder="Name" id="sname" onfocus="myFocus(this.id)" onblur="myBlu(this.id)" required><br><br>   
-            
+            <input type="text" name="senderName" placeholder="Name" id="sname" onfocus="myFocus(this.id)"
+               onblur="myBlu(this.id)" required><br><br>
+
             <div class="hint" id="semailHint">Enter a valid email address (e.g., user@example.com).</div>
-            <input type="email" name="senderEmail" placeholder="Email" id ="semail" onfocus="myFocus(this.id)" onblur="myBlu(this.id)" required><br><br>
+            <input type="email" name="senderEmail" placeholder="Email" id="semail" onfocus="myFocus(this.id)"
+               onblur="myBlu(this.id)" required><br><br>
 
             <div class="hint" id="ssubHint">Provide a short subject for your message.</div>
-            <input type="text" name="mesSubject" placeholder="Subject" id= "ssub" onfocus="myFocus(this.id)" onblur="myBlu(this.id)" required><br><br>
+            <input type="text" name="mesSubject" placeholder="Subject" id="ssub" onfocus="myFocus(this.id)"
+               onblur="myBlu(this.id)" required><br><br>
 
             <div class="hint" id="msgHint">Write your message here.</div>
-            <textarea placeholder="Message" id="msg" name="message" minlength="15" onfocus="myFocus(this.id)" onblur="myBlu(this.id)" required></textarea><br><br>
-            
-            <input type="submit" id="send" value="Send Message" >
+            <textarea placeholder="Message" id="msg" name="message" minlength="15" onfocus="myFocus(this.id)"
+               onblur="myBlu(this.id)" required></textarea><br><br>
+
+            <input type="submit" id="send" value="Send Message">
             <input type="reset" id="cancel" value="Cancel"><br><br>
 
          </form>
@@ -66,7 +72,7 @@
 
 
       <div class="contact-info">
-         <h3 onmouseover="style.color='#f5c6d3'" onmouseout="style.color='black'" ondblclick="dClickFunction()">GET IN TOUCH</h3>
+         <h3>GET IN TOUCH</h3>
          <p id="hiddenPar">Feel free to contact us any time. we will get <br>
             back to you as soon as we can!!</p>
 
@@ -104,7 +110,6 @@
       </div>
 
    </div>
-   
    <div class="row2">
       <footer class="footer">
          <div class="footer-content">
@@ -145,6 +150,7 @@
       </footer>
    </div>
 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
